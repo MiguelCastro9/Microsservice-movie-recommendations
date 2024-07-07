@@ -25,7 +25,7 @@ public class MovieController {
     @GetMapping("/movies")
     public ResponseEntity<List<MovieResponseDto>> findAllMovies() {
         return new ResponseEntity<List<MovieResponseDto>>(
-                movieService.listAllMovies().stream().map(movie
+                movieService.findAllMovies().stream().map(movie
                         -> MovieResponseDto.convertEntityForMovieResponseDto(movie))
                         .collect(Collectors.toList()), HttpStatus.OK);
     }
