@@ -9,5 +9,4 @@ import org.springframework.stereotype.Repository;
  * @author Miguel Castro
  */
 @Repository
-public interface MovieRepository extends JpaRepository<MovieModel, Long> {
-}
+public interface MovieRepository extends JpaRepository<MovieModel, Long> {}

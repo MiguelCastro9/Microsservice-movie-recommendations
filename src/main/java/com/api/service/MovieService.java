@@ -9,5 +9,5 @@ import java.util.List;
  */
 public interface MovieService {
     
-    public List<MovieModel> listAllMovies();
+    public List<MovieModel> findAllMovies();
 }

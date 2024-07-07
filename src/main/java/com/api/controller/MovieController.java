@@ -20,12 +20,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class MovieController {
 
     @Autowired
-    MovieService MovieService;
+    MovieService movieService;
 
     @GetMapping("/movies")
     public ResponseEntity<List<MovieResponseDto>> findAllMovies() {
         return new ResponseEntity<List<MovieResponseDto>>(
-                MovieService.listAllMovies().stream().map(movie
+                movieService.listAllMovies().stream().map(movie
                         -> MovieResponseDto.convertEntityForMovieResponseDto(movie))
                         .collect(Collectors.toList()), HttpStatus.OK);
     }
