@@ -1,0 +1,18 @@
+# DOCKER COMPOSE - MYSQL
+version: '3.8'
+
+services:
+  # CONTAINER - MYSQL
+  # docker exec -it mysql-movie-data-service mysql -uroot -proot
+  mysql:
+    # plataform for MACOS M1
+    platform: linux/amd64
+    image: mysql:8.0.22
+    container_name: mysql-movie-data-service
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: movie_db
